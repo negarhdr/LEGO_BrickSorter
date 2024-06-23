@@ -9,6 +9,7 @@ Note: This is a mockup code to represent the overall platform architecture and c
 - [Installation](#installation)
   - [Requirements](#requirements)
   - [Installing YOLOv7](#installing-yolov7)
+- [Data Preparation](#data-preparation)
 - [Training the Classifier](#training-the-classifier)
 - [Inference](#inference)
 - [Unit Tests](#unit-tests)
@@ -37,6 +38,12 @@ pip install -r requirements.txt
 ```
 
 3. Follow the instructions in the YOLOv7 repository to set up and prepare the model weights. 
+
+
+## Data Preparation
+
+In this mockup code, it is assumed that a set of brick images along with their corresponding labels (such as Brick-ID, or Brick-type) are collected. This image collection can be captured through scanning LEGO bricks, or generating synthetic images (renderings) from different views using the 3D CAD designs of LEGO bricks, such as the ones provided in [LDraw](https://library.ldraw.org/updates?latest) and [Rebrickable](https://rebrickable.com). 
+
 
 ## Training the Classifier
 

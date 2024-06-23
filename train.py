@@ -90,8 +90,6 @@ def train_classifier(model, train_dataset, val_dataset, epochs, learning_rate):
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
-
-
     for epoch in range(epochs):
         model.train()
         running_loss = 0.0
@@ -114,8 +112,8 @@ def train_classifier(model, train_dataset, val_dataset, epochs, learning_rate):
                 loss = criterion(outputs, labels)
                 val_loss += loss.item()
                 _, predicted = torch.max(outputs.data, 1)
-                total += labels.size(0)
-                correct += (predicted == labels).sum().item()
+                total += labels.size(0) # total number of classified objects 
+                correct += (predicted == labels).sum().item() # total correct predictions
 
         print(f'Epoch {epoch+1}/{epochs}, Loss: {running_loss/len(train_loader)}, Val Loss: {val_loss/len(val_loader)}, Accuracy: {correct/total * 100}%')
 
