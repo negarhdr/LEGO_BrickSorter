@@ -1,0 +1,25 @@
+# PyTorch and related libraries
+torch==1.9.0
+torchvision==0.10.0
+
+# Image processing
+opencv-python==4.5.3.56
+numpy==1.21.2
+
+# ONNX and ONNX Runtime
+onnx==1.10.1
+onnxruntime==1.9.0
+
+# Other utilities
+tqdm==4.62.2
+matplotlib==3.4.3
+scikit-learn==0.24.2
+
+# For testing
+unittest-xml-reporting==3.0.4
+
+# Optional: To handle YAML configurations (if needed)
+pyyaml==5.4.1
+
+# Ensure the right version of Pillow for torchvision
+Pillow==8.3.1
